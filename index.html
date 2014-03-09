@@ -8,13 +8,39 @@
   </head>
   <body>
     <div class="row">
-      <div class="small-12 columns">
-        <h1>Pokemon caught: <span id="pokemon">0</span></h1>
-        <h1>Money: $<span id="money">0</span></h1>
-
+      <div class="small-12 medium-4 columns">
         <div class="buttons">
-          <button id="pokeclicks">Catch</button>
-          <button id="sell">Sell</button>
+          <div class="catch">
+            <h1>Pokemon Caught<h1>
+            <div class="amount">
+              <span id="pokemon">0</span>
+            </div>
+            <button id="pokeclicks">Catch</button>
+          </div>
+
+          <div class="sell">
+            <h1>Money<h1>
+            <div class="amount">
+              $<span id="money">0</span>
+            </div>
+            <button id="sell">Sell</button>
+          </div>
+        </div>
+      </div>
+      <div class="small-12 medium-8 columns">
+        <h1>PokeShop</h1>
+
+        <ul class="items">
+          <li class="item">
+            <span class="amount right">0</span>
+            <h1>Shady Trainer</h1>
+            <span class="price">$100</span>
+
+            <div class="item-buttons">
+              <button>Purchase</button>
+              <button>Sell</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
