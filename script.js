@@ -60,7 +60,7 @@ Item.prototype.buy = function(item) {
 
 Item.prototype.sell = function(item) {
   if(item.count > 0) {
-    tem.count--;
+    item.count--;
     money += (item.price / 2);
 
     item.countElement.innerHTML = item.count;
@@ -122,11 +122,28 @@ SellItem.prototype.distribute = function(item) {
   }
 }
 
-var pitchingMachine = new CatchItem('Pitching Machine', 100, 5000);
-document.getElementById('catchItems').appendChild(pitchingMachine.getElement());
+var catchItems = document.getElementById('catchItems')
+var distributeItems = document.getElementById('sellItems')
 
-var professor = new SellItem('Shady Professor', 200, 7000);
-document.getElementById('sellItems').appendChild(professor.getElement());
+catchItems.appendChild(new CatchItem('Pitching Machine', 100, 5000).getElement());
+
+catchItems.appendChild(new CatchItem('Shady Trainer', 1000, 1000).getElement());
+
+catchItems.appendChild(new CatchItem('Shady Gym Leader', 10000, 200).getElement());
+
+catchItems.appendChild(new CatchItem('Shady Elite Four Member', 50000, 66).getElement());
+
+catchItems.appendChild(new CatchItem('Red', 150000, 20).getElement());
+
+distributeItems.appendChild(new SellItem('Shady Professor', 200, 7000).getElement());
+
+distributeItems.appendChild(new SellItem('Shady Rival', 1500, 2000).getElement());
+
+distributeItems.appendChild(new SellItem('Shady Bug Catcher', 5000, 500).getElement());
+
+distributeItems.appendChild(new SellItem('Ash Ketchum', 30000, 143).getElement());
+
+distributeItems.appendChild(new SellItem('Pikachu on Acid', 70000, 50).getElement());
 
 var pokemonElement = document.getElementById("pokemon")
 var pokemon = 0;
