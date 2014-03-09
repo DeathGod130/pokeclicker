@@ -19,8 +19,12 @@ function catchPokemon(numbercaught) {
 }
 
 function sellPokemon(moolah) {
+  if (pokemon > 0) {
   pokemon --;
   pokemonElement.innerHTML = pokemon;
   money += moolah;
   moneyElement.innerHTML = money;
+  }
+  else {
+  }
 }
