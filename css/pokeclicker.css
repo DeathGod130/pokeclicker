@@ -7,22 +7,22 @@
   color: #4D4B4B;
 }
 
-.buttons {
+.stats {
   text-align: center;
 }
 
-.buttons button {
+.stats button {
   display: block;
   width: 75%;
   font-size: 18pt;
 }
 
-.buttons h1 {
+.stats h1 {
   font-size: 28pt;
   font-weight: normal;
 }
 
-.buttons .amount {
+.stats .amount {
   font-weight: bold;
 }
 
