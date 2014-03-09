@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/foundation.min.css">
     <link rel="stylesheet" href="css/pokeclicker.css">
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
   </head>
   <body>
     <div class="row">
@@ -30,21 +32,59 @@
       <div class="small-12 medium-8 columns">
         <h1>PokeShop</h1>
 
-        <ul class="items">
-          <li class="item">
-            <span class="amount right">0</span>
-            <h1>Shady Trainer</h1>
-            <span class="price">$100</span>
+        <dl class="tabs" data-tab>
+          <dd class="active"><a href="#catch_tab">Catch</a></dd>
+          <dd><a href="#sell_tab">Sell</a></dd>
+        </dl>
+        <div class="tabs-content">
+          <div class="content active" id="catch_tab">
+            <ul class="items">
+              <li class="item">
+                <span class="amount right">0</span>
+                <h1>Shady Trainer</h1>
+                <span class="price">$100</span>
 
-            <div class="item-buttons">
-              <button>Purchase</button>
-              <button>Sell</button>
-            </div>
-          </li>
-        </ul>
+                <div class="item-buttons">
+                  <button>Purchase</button>
+                  <button>Sell</button>
+                </div>
+              </li>
+              <li class="item">
+                <span class="amount right">0</span>
+                <h1>Shady Gym Leader</h1>
+                <span class="price">$100</span>
+
+                <div class="item-buttons">
+                  <button>Purchase</button>
+                  <button>Sell</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content" id="sell_tab">
+            <ul class="items">
+              <li class="item">
+                <span class="amount right">0</span>
+                <h1>Box</h1>
+                <span class="price">$100</span>
+
+                <div class="item-buttons">
+                  <button>Purchase</button>
+                  <button>Sell</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
 
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="js/fastclick.min.js"></script>
+    <script src="js/foundation.min.js"></script>
     <script src="script.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
   </body>
 </html>
